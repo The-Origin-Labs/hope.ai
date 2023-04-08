@@ -2,9 +2,10 @@
   "name": "hope.ai",
   "version": "1.0.0",
   "description": "<h1 align=\"center\">Hope.ai</h1>",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "cypress": "cypress open"
   },
