@@ -18,6 +18,7 @@
 
 ## API Reference
 
+- API documentation can be access through [API Docs](https://documenter.getpostman.com/view/16181974/2s93XsX6GA)
 
 ## Environment Variables
 
