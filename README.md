@@ -24,8 +24,10 @@
 
 To run this project, you will need to add the following environment variables to your `.env` file
 
-- `API_KEY`
-
+- `PORT`
+- `LOCALHOST_PORT`
+- `DATABASE_URL`
+- `HOST_URL`
 
 
 ##  Setting up development Environment
