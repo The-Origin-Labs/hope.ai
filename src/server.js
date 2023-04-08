@@ -1,20 +1,29 @@
 // Dependencies
 const express = require('express');
-const TessaractConvert = require('../modules/tessaract');
+const { TessaractConvert, TessaractClient } = require('../modules/tessaract');
 
 // ##############
 // Express client 
 // ##############
 const app = express()
+const PORT = process.env.PORT || 8002
 
+// middleware
+app.use(express.json())
 
 app.get("/", (req, res) => {
-    res.send("server running perfectly")
+    res.json({
+        "message":"server running perfectly"
+    })
 })
 
-app.get("/generate", TessaractConvert)
+// Sample OCR testing Route
+app.get("/v1/test/generate", TessaractConvert)
+
+// Generate OCR text
+app.post("/v1/ocr", TessaractClient)
 
 
-app.listen(8000, () => {
-    console.log(`server running at http://localhost:8000 🚀`)
+app.listen(PORT, () => {
+    console.log(`server running at http://localhost:${PORT} 🚀`)
 })
