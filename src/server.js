@@ -1,12 +1,15 @@
 // Dependencies
 const express = require('express');
+const morgan = require('morgan')
+const cors = require('cors')
+require('dotenv').config()
 const { TessaractConvert, TessaractClient } = require('../modules/tessaract');
 
 // ##############
 // Express client 
 // ##############
 const app = express()
-const PORT = process.env.PORT || 8002
+const PORT = process.env.PORT || 8004
 
 // middleware
 app.use(express.json())
